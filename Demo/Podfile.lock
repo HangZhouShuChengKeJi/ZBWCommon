@@ -17,12 +17,12 @@ PODS:
   - "ZBWCategories/UIKit+ZBWCategory (0.1.8)":
     - SDWebImage
     - ZBWJson
-  - ZBWCommon-iOS (0.0.1):
+  - ZBWCommon (0.0.1):
     - ZBWCategories
   - ZBWJson (0.0.11)
 
 DEPENDENCIES:
-  - ZBWCommon-iOS (from `../`)
+  - ZBWCommon (from `../`)
 
 SPEC REPOS:
   trunk:
@@ -31,15 +31,15 @@ SPEC REPOS:
     - ZBWJson
 
 EXTERNAL SOURCES:
-  ZBWCommon-iOS:
+  ZBWCommon:
     :path: "../"
 
 SPEC CHECKSUMS:
   SDWebImage: 53179a2dba77246efa8a9b85f5c5b21f8f43e38f
   ZBWCategories: 437272594c663c5fdd6045b4a2895a00c1aec704
-  ZBWCommon-iOS: e29df3e21f1310997916da01bce09d3d4f23c98f
+  ZBWCommon: 66a48859c10752b1b0cfd7152bad9c8a3392bfd2
   ZBWJson: 500456abe901e9756f8290e64e63ba1dd9cb70bb
 
-PODFILE CHECKSUM: a6dc2f7a0089fffd6b3c8d87c22a71cb2b60de5c
+PODFILE CHECKSUM: 61d4ea44a195047094d828daf5d53e561a33fdeb
 
 COCOAPODS: 1.11.2
