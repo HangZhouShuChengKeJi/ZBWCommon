@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "ZBWCommon-iOS"
+  s.name         = "ZBWCommon"
   s.version      = "0.0.1"
   s.summary      = "常用工具类"
 
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
                     常用工具类：全局定时器；后台队列。
                    DESC
 
-  s.homepage     = "https://github.com/HangZhouShuChengKeJi/ZBWCommon-iOS"
+  s.homepage     = "https://github.com/HangZhouShuChengKeJi/ZBWCommon"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "git@gitlab.91chengguo.com:zhubowen/Common-iOS.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/HangZhouShuChengKeJi/ZBWCommon.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -91,7 +91,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Common-iOS", "Common-iOS/**/*.{h,m}"
+  s.source_files  = "ZBWCommon", "ZBWCommon/**/*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
