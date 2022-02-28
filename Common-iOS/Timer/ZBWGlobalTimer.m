@@ -7,7 +7,7 @@
 //
 
 #import "ZBWGlobalTimer.h"
-#import "NSTimer+ZBWWeakTimer.h"
+#import <ZBWCategories/NSTimer+ZBWWeakTimer.h>
 #import "ZBWBackgroudQueue.h"
 
 

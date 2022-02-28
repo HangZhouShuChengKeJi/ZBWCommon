@@ -15,9 +15,9 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "Common-iOS"
+  s.name         = "ZBWCommon-iOS"
   s.version      = "0.0.1"
-  s.summary      = "A short description of Common-iOS."
+  s.summary      = "常用工具类"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,10 +25,10 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-                    A short description of Common-iOS.A short description of Common-iOS.
+                    常用工具类：全局定时器；后台队列。
                    DESC
 
-  s.homepage     = "git@gitlab.91chengguo.com:zhubowen/Common-iOS.git"
+  s.homepage     = "https://github.com/HangZhouShuChengKeJi/ZBWCommon-iOS"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -53,7 +53,7 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  s.author             = { "朱博文" => "" }
+  s.author             = { "朱博文" => "bowen.zhu@91chengguo.com" }
   # Or just: s.author    = "朱博文"
   # s.authors            = { "朱博文" => "" }
   # s.social_media_url   = "http://twitter.com/朱博文"
@@ -133,8 +133,8 @@ Pod::Spec.new do |s|
   # s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  s.dependency "ZBWCategories"
-  s.dependency 'ZBWMacroDefine/biz', '~>0.1.2'
-  s.dependency 'libwebp', '0.6.1'
+
+  s.dependency 'ZBWCategories'
+  
 
 end
