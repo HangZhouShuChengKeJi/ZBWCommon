@@ -214,9 +214,10 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 #define kZBW_ToastInView(msgStr, view) \
 do {\
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];\
-    hud.bezelView.color = [UIColor blackColor];\
+    hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;\
+    hud.bezelView.color = [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1];\
     hud.contentColor = [UIColor whiteColor];\
-    hud.detailsLabel.font = kZBW_Font_Mid_2;\
+    hud.detailsLabel.font = kZBW_Font(16);\
     hud.mode = MBProgressHUDModeText;\
     hud.userInteractionEnabled = NO;\
     hud.label.text = nil;\
@@ -228,6 +229,35 @@ do {\
 
 #define kZBW_Toast(msgStr) \
 kZBW_ToastInView(msgStr, [[UIApplication sharedApplication] zbw_mainWindow]);
+
+
+
+#define kZBW_Icon_ToastInView(msgStr, icon, view) \
+do {\
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];\
+    hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;\
+    hud.bezelView.color = [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1];\
+    hud.contentColor = [UIColor whiteColor];\
+    hud.detailsLabel.font = kZBW_Font(16);\
+    hud.mode = MBProgressHUDModeText;\
+    hud.userInteractionEnabled = NO;\
+    hud.label.text = nil;\
+    NSMutableAttributedString *textAttrStr = [[NSMutableAttributedString alloc] init];\
+    NSTextAttachment *attach = [[NSTextAttachment alloc] init];\
+   attach.image = icon;\
+   attach.bounds = CGRectMake(0, -7 , 24, 24);\
+   NSAttributedString *imgStr = [NSAttributedString attributedStringWithAttachment:attach];\
+   [textAttrStr appendAttributedString:imgStr];\
+   NSMutableAttributedString *detailattrStr = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"  %@",msgStr]];\
+   [textAttrStr appendAttributedString:detailattrStr];\
+    hud.detailsLabel.attributedText = textAttrStr;\
+    hud.minShowTime = 1;\
+    hud.removeFromSuperViewOnHide = YES;\
+    [hud hideAnimated:YES afterDelay:2];\
+} while(0);
+
+#define kZBW_Icon_Toast(msgStr, icon) \
+kZBW_Icon_ToastInView(msgStr, icon, [[UIApplication sharedApplication] zbw_mainWindow]);
 
 
 #define kZBW_LoadingStyle    0
